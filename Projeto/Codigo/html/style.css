@@ -8,18 +8,19 @@ body{
 }
 .fonttitle {
     font-family: fantasy;
-    font-size: 500%;
+    font-size: 8vh;
+    
 }
 .fonttitle:hover{
-    font-size: 4em;
+    font-size: 7vh;
     
 }
 
 .topo{
     color: #F1A208;
     background-color: #3E363F;
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 5vh;
+    margin-right: 5vh;
     width:auto;
     height: auto;
     border-bottom-left-radius: 15px;
@@ -30,9 +31,7 @@ body{
 
 .topo > .bannerheader{
     width: auto;
-    height: 150px;
-
-    
+    height: 18vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +39,7 @@ body{
 .topo > .menuheader{
     background-color: #FFFCE8;
     width: 100%;
-    height: 50px;
-    border-color:  #050586;
+    height: 4vh;
     display:flex; 
     flex-direction: row-reverse;
     border-bottom-left-radius: 15px;
@@ -50,12 +48,12 @@ body{
 }
 .menuheader > a{
 
-   
+    font-size: 1vh;
     background-image: linear-gradient(#a72924, #DD403A);
     color: #FFFCE8;
     font-weight: bold;
-    width: 10em;
-    height: 2em;
+    width: 10vh;
+    height: 2vh;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -66,9 +64,7 @@ body{
     background-image: linear-gradient( #DD403A,#a72924);
  
 } 
-.menuheader > a:visited{
 
-}
 .menuheader > a:active{
     color: #F1A208;
     background-image: linear-gradient( #605a61,#3E363F);
@@ -84,7 +80,7 @@ display: flex;
 height: 100%;
 
 }
-.corpoesquerdo{
+.corpointeiro > .corpoesquerdo{
     background-color: #FFFCE8;
     border-radius: 5px;
     
@@ -97,7 +93,7 @@ height: 100%;
     padding: 2em;
     padding-top: 2.5em;
 }
-.corpodireito{
+.corpointeiro > .corpodireito{
     background-color: #FFFCE8;
     border-radius: 5px;
     
@@ -113,6 +109,8 @@ height: 100%;
     flex-direction: column;
 
 }
+
+
 .titletext{
     background-image: linear-gradient(#a72924, #DD403A);
     border-top-left-radius: 10px;
@@ -146,6 +144,84 @@ height: 100%;
     height: auto;
     
 }
+
+.corpointeiro > .corpounico{
+    background-color: #FFFCE8;
+    border-radius: 5px;
+    font-size: 2vh;
+    margin-top: 1vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    width: 100%;
+    height: auto;
+    color: #3E363F;
+    padding-left: 30vh;
+    padding-right: 30vh;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    min-height: 55vh;
+    max-height: max-content;
+    display: flex;
+   
+    
+    justify-content: center;
+}
+.corpounico > form {
+    border: #000000;
+    border-style: dotted;
+    width: 50%;
+    height: auto;
+    min-height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+}
+.corpounico > form > div {
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+}
+.loginbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right: 1vw;
+}
+.loginbox > input{
+    background-color: #3E363F;
+    color: #FFFCE8 ;
+    font-weight: 300;
+    height: 3vh;
+    width: 20vh;
+    font-size: 2vh;
+    margin-top: 1vh;
+    
+}
+.loginbox > .buttonbox{
+    display: flex;
+    flex-direction: row;
+}
+.buttonbox > input{
+    background-color: #3E363F;
+    color: #F1A208;
+    font-weight: 300;
+    height: 4vh;
+    width: 6vw;
+    min-width:max-content;
+    font-size: 3vh;
+    margin: 1vh;
+    font-size: 2vh;
+}
+
+
+.loginbox > label{
+    font-size: 3vh;
+    font-weight:600;
+}
+
 /*
 .spacefooter{
     width: 100%;
@@ -163,7 +239,7 @@ footer{
     display: flex;
     flex-direction: row;
     font-weight: bold;
-    
+    bottom: 0;
 }
 footer > .footeresquerdo{ 
     padding: 1em; 
