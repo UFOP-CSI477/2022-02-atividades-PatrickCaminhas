@@ -8,7 +8,7 @@ body{
 }
 .fonttitle {
     font-family: fantasy;
-    font-size: 5em;
+    font-size: 500%;
 }
 .fonttitle:hover{
     font-size: 4em;
@@ -81,6 +81,7 @@ body{
 
 .corpointeiro{
 display: flex;
+height: 100%;
 
 }
 .corpoesquerdo{
