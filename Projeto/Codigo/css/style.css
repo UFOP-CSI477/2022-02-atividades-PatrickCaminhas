@@ -6,6 +6,61 @@
 body{
     background-color: #DD403A;
 }
+
+.menu{
+    background-color: #b91b16;
+    display: block;
+    position: fixed;
+    align-items: center;
+    width: 2vw;
+    height: 100vh;
+    align-items: center;
+}
+
+span#burguer{
+    background-color: #b91b16;
+    color: #fffce8;
+    
+    cursor: pointer;
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    
+}
+
+
+menu{
+    margin-left: 2vw;
+    display: none;
+    position:fixed;
+}
+
+ul{
+    background-color: #b62f2aa6;
+    height: 100vh;
+
+}
+
+ul > li {
+    background-color: #b62e2a;
+    border-color: #b62f2a2a;
+    border-width: 1px;
+    border-style: solid;
+    color: #fffce8;
+    padding: 0.75em;
+    list-style-type: none;
+    width: 10vw;
+    
+}
+ul > li > a{
+    font-weight: 400;
+    text-decoration: none;
+    color: #fffce8;
+}
+ul > li:hover{
+    background-color: #b91b16;
+}
+
 .titulo{
     display: flex;
     width: 100vw;
@@ -21,6 +76,7 @@ body{
     height: 40vh;
     width: 30vw;
 }
+
 
 .index-box{
     display: flex;
@@ -70,7 +126,6 @@ body{
 }
 .botao{
     width: 10vw;
-    
     background-color: #DD403A;
     color: white;
     border-radius: 10px;
@@ -79,6 +134,7 @@ body{
     align-items: center; 
     margin-bottom: 1vh;
     margin-right: 1vw;
+    text-decoration: none;
     
 }
 .botao:hover{
@@ -87,5 +143,6 @@ body{
 .botao:active{
     background-color: #DD403A;
     font-weight: bold;
+    
 }
 
