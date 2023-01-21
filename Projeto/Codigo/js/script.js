@@ -5,3 +5,12 @@ function clickMenu(){
         itens.style.display = 'block'
     }
 }
+
+ function closeTeste() {
+    teste.style.display='none'
+    testeback.style.display='none'
+}
+function openTeste(){
+    teste.style.display='block'
+    testeback.style.display='block'
+}
