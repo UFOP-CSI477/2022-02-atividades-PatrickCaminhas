@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLanches</title>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body onload="changetoRegister()">
+    <div class="menu">
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+    </div>
+    <menu id="itens">
+        <ul>
+            <li><a href="index.html"> <span class="material-symbols-outlined">home</span>INICIO</a></li>
+            <li><a href="login.html"><span class="material-symbols-outlined">group</span>LOGIN</a></li>
+            <li><a href="cadastro.html"><span class="material-symbols-outlined">person_add</span>CADASTRO</a></li>
+            <li><a href="">NOSSA HISTÓRIA</a></li>
+        </ul>
+    </menu>
+
+    <div id="titulobox" class="titulo">
+        <img id="tituloimg" src="../img/titulo.png" alt="" href="index.html">
+    </div>
+    <div id="indexbox" class="index-box">
+        
+        <div id="leftSide" class="left-side">
+            <span class="titlebox"><span class="material-symbols-outlined">person_add</span>CADASTRO</span>
+            <form class="formularioLogin" action="index.html">
+                <div class="information">
+                    <label for="nome" class="label-cadastro">Nome:</label>
+                    <input type="text" name="nome" required="required" placeholder="Digite seu nome completo" /> 
+                    <label for="sexo" class="label-cadastro">Sexo:</label>
+                <div class="radiobox">
+                    <input type="radio" name="sexo" value="masculino" required="required"/> <a>Masculino</a>
+                    <input type="radio" name="sexo" value="feminino" required="required"/> <a>Feminino</a>
+                    <input type="radio" name="sexo" value="outro" required="required"/> <a>Outro</a>
+                </div>
+                    <label for="email" class="label-cadastro">E-mail:</label>
+                    <input type="email" name="email" required="required" placeholder="Digite seu e-mail" />                    
+
+                    <label for="rua" class="label-cadastro">Rua:</label>
+                    <input type="text" name="rua" required="required" placeholder="Digite o nome da sua rua" />
+                    <label for="numerocasa" class="label-cadastro">Numero:</label>
+                    <input type="number" name="numerocasa" required="required" placeholder="Digite o numero da sua residencia" />
+                    <label for="complemento" class="label-cadastro">Complemento:</label>
+                    <input type="text" name="complemento" placeholder="ex: Apto 404 / Casa B" />
+                    <label for="bairro" class="label-cadastro">Bairro:</label>
+                    <input type="text" name="bairro" required="required" placeholder="Digite o nome do seu bairro" />
+                    <label for="senha" class="label-cadastro">Senha:</label>
+                    <input type="password" name="senha" required="required" placeholder="Digite sua senha"></input> 
+                    
+                    <div class="botaocaixa">
+                    <input id="botaoLogin" type="submit" name="Login" class="botao" value="Cadastrar">
+                    <input id="botaoReset" type="reset" name="Login" class="botao botaoReset" value="Limpar"></div>
+                </div>
+               
+                   
+                
+
+            </form>
+        </div>
+
+
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

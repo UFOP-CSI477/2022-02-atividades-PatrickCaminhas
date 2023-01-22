@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 .menu {
     background-color: #b91b16;
     display: block;
-    position: absolute;
+    position: fixed;
     align-items: center;
     width: 2vw;
     height: 100vh;
@@ -86,7 +86,7 @@ span#burguer {
     margin-bottom: 10vh;
     margin-left: 10vw;
     margin-right: 10vw;
-    position: fixed;
+    
     overflow-y: scroll;
 
 
@@ -173,27 +173,39 @@ ul>li:hover {
 }
 
 .titulo>img {
-    height: 50vh;
+    height: auto;
     width: auto;
 }
 
 .titulo>img:hover {
     height: 40vh;
-    width: 30vw;
+    width: auto;
 }
 
 
 .index-box {
     display: flex;
-    width: 80%;
-    height: 50%;
+    width: 80vw;
+    height: 50vh;
     min-width: 95vw;
     min-height: 50vh;
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 2.5vw;
 
+
 }
+
+.index-box>.left-side {
+    background-color: #fffce8;
+    height: auto;
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
 
 .index-box>div {
     width: 400px;
@@ -231,6 +243,52 @@ ul>li:hover {
     width: 10%;
     display: flex;
     justify-content: flex-end;
+
+}
+
+.formularioLogin {
+
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.information {
+    height: 30vh;
+    justify-content: center;
+
+}
+
+.information>label {
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.information>input {
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+.buttonbox {
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.botaocaixa {
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+
 }
 
 .botao {
@@ -245,7 +303,44 @@ ul>li:hover {
     margin-right: 1vw;
     text-decoration: none;
     cursor: pointer;
+}
 
+.titlebox {
+    height: 2vh;
+    margin-top: 4vh;
+    position: fixed;
+    font-size: 3vh;
+    padding-bottom: 1vh;
+    
+}
+
+.titlebox>span {
+    font-size: 3vh;
+    color: #b62e2a;
+
+}
+
+.information>.label-cadastro {
+    font-size: 2vh;
+}
+
+.information>input[type="radio"] {
+    margin: 0vh;
+    width: auto;
+    margin-right: 0vh;
+}
+
+.information>.radiobox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.information>.radiobox>a {
+    margin-right: 1vw;
+    margin-left: 0.2vw;
+    font-size: 2vh;
 }
 
 .botao:hover {
