@@ -16,4 +16,4 @@ O cliente que necessita do produto pode realizar seu cadastro, fazer o login na 
 
 Já para o lado do funcionario a plataforma permite a atualização dos status dos pedidos e status do funcionamento da lanchonete. O funcionario também pode fazer pesquisas sobre clientes e realizar leitura de alguns de seus dados alem de ver dados e estatisticas sobre pedidos realizados. 
 
-Link do protótipo: https://www.figma.com/file/buCXSYgDjMvyZYUeU0irju/iLanches?node-id=0%3A1&t=HVGZEpJPjqnK6sHt-1
+Link do protótipo: https://www.figma.com/proto/buCXSYgDjMvyZYUeU0irju/iLanches?node-id=0%3A1&scaling=contain&page-id=0%3A1
