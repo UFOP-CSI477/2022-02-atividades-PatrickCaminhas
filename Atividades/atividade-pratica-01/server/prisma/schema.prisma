@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Tipo{
+  id Int @id @default(autoincrement())
+  tipo String
+  Fator String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  pessoas Pessoas[]
+
+  @@map("tipo")
+}
+
+model Pessoas{
+  id Int @id @default(autoincrement())
+  nome String
+  rua String
+  numero String
+  complemento String
+  documento String
+  cidade_id Int
+  tipo_id Int
+  tipo Tipo @relation(fields: [tipo_id], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  doacoes Doacoes[]
+
+  @@map("pessoas")
+}
+
+model Locais{
+  id Int @id @default(autoincrement())
+  nome String
+  rua String
+  numero String
+  complemento String
+  cidade_id Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  doacoes Doacoes[]
+
+  @@map("locais")
+}
+
+model Doacoes{
+  id Int @id @default(autoincrement())
+  pessoa_id Int
+  local_id Int
+  data DateTime
+  pessoa Pessoas @relation(fields: [pessoa_id], references: [id])
+  local Locais @relation(fields: [local_id], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  @@map("doacoes")
+}
