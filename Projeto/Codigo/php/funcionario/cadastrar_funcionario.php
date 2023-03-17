@@ -7,11 +7,16 @@ include("db_connect.php");
 // Iniciar a sessão
 session_start();
 
-// Verificar se o usuário está logado
+$admin= $_SESSION['admin'];
+
 if (!isset($_SESSION['cpf'])) {
 header('location: login_funcionario.php');
 exit;
 }
+if (isset($_SESSION['cpf']) && $admin == 'nao' ) {
+    header('location: plataforma_funcionario.php');
+    exit;
+    }
 
 // Capturar o nome do usuário logado
 $cpf = $_SESSION['cpf'];
@@ -36,6 +41,7 @@ if (isset($_POST['cadastrar'])) {
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha'];
+    $senha = md5($senha);
 
     $query = "SELECT * FROM funcionario WHERE cpf = '$cpf'";
     $result = mysqli_query($con, $query);
@@ -61,18 +67,94 @@ if (isset($_POST['cadastrar'])) {
 
 <head>
     <title>Cadastro de funcionario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
-    <a href="plataforma_funcionario.php">Voltar</a>
-    <h1>Cadastro de funcionario</h1>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <h3>Dados</h3>
-        Nome: <input type="text" name="nome" /><br />
-        CPF: <input type="number" name="cpf" /><br />
-        Senha: <input type="password" name="senha" /><br />
-        <input type="submit" name="cadastrar" value="Cadastrar" />
+
+    <div class="titulo mx-auto">
+        <img src="../../images/titulo.png" alt="iLanches Titulo" >
+    </div>
+    <div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h4 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                            <?php echo "Nome: ". $user['nome']; ?>
+                            <br>
+                            <?php echo "CPF: ". $user['cpf']; ?>
+                        </h4>
+
+
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                            
+                        </h5>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="plataforma_funcionario.php">Plataforma</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pedidos_funcionario.php">Alterar pedidos abertos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pedidos_lista_funcionario.php">Pedidos fechados</a>
+                            </li>
+
+                            <?php
+                            if ($user['administrador'] == 'sim') {
+                                echo "<li class='nav-item'> <a class='nav-link' href='administrador.php'>Funções do administrador</a></li>";
+                                echo "<li class='nav-item'> <a class='nav-link  active fw-bolder' aria-current='page'  href='cadastrar_funcionario.php'>Cadastrar funcionário</a></li>";
+                            }
+                            ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout.php">Sair</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+   <div class="col-md-10  mx-auto mt-3 col-lg-4 ">
+   
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="p-4 p-md-5 border rounded-3 bg-dark border border-danger" > 
+    <h3 class="text-danger">Cadastro de funcionario</h3>
+    <h4 class="text-danger">Dados</h4>
+        <div class="form-floating mb-3">
+        <input type="text" name="nome" class="form-control" placeholder="Nome" required />
+        <label for="floatingInput">Nome</label>
+        </div>
+        <div class="form-floating mb-3">
+        <input type="number" name="cpf" class="form-control" placeholder="CPF" required />
+        <label for="floatingInput">CPF</label>
+        </div>
+        <div class="form-floating mb-3">
+        <input type="password" name="senha" class="form-control" placeholder="Password" required />
+        <label for="floatingPassword">Senha</label>
+        </div>
+        <div >
+        <input type="submit" name="cadastrar" value="Cadastrar" class="mx-auto btn btn-lg btn-danger"/>
+        </div>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

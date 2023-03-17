@@ -3,6 +3,8 @@
 // Incluir o arquivo de conexão com o banco de dados
 include("db_connect.php");
 
+
+
 // Verificar se o botão de login foi pressionado
 if (isset($_POST['login'])) {
 
@@ -44,27 +46,41 @@ echo  "<script>alert('CPF ou senha incorretos!');</script>";
 <html>
 <head>
 <title>Login Funcionario</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
+
+<div class="titulo mx-auto">
+        <img src="../../images/titulo.png" alt="iLanches Titulo">
+    </div>
+    
+
 
 <?php 
 if (isset($errMsg)) {
 echo '<div>'.$errMsg.'</div>'; 
 }
 ?>
-    <ul>
-        <li><a href="../../index.php">Inicio</a></li>
-        <li><a href="cardapio.php">Cardapio</a></li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="cadastro.php">Cadastro</a></li>
-        </ul>
-<div>
-<form action="" method="post">
-<input type="text" name="cpf" placeholder="CPF" required />
-<input type="password" name="senha" placeholder="Senha" required />
-<input type="submit" name="login" value="Login" />
-</form>
+ 
+ <div class="col-md-10  mx-auto mt-3 col-lg-4 ">
+<form class="p-4 p-md-5 border rounded-3 bg-dark border border-danger" action="" method="post">
+<h4 class="text-danger">Login - Funcionários</h4>
+  <div class="form-floating mb-3">
+<input type="text" name="cpf" class="form-control" placeholder="CPF" required />
+<label for="floatingInput">CPF</label>
 </div>
+<div class="form-floating mb-3">
+<input type="password" name="senha" class="form-control" placeholder="Password" required />
+<label for="floatingPassword">Senha</label>
+</div>
+<input type="submit" name="login" class="w-100 btn btn-lg btn-danger" value="Login" />
+
+</form>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </body>
 </html>
