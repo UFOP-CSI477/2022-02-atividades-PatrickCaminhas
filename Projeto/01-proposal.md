@@ -31,4 +31,8 @@
 
 ### 5. Referências
 
-  Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT.
+THE PHP GROUP. PHP: Hypertext Preprocessor. Disponível em: <https://www.php.net/>. Acesso em: 19 de fev. 2023.
+CONTRIBUTORS, M. O., Jacob Thornton, and Bootstrap. Get started with Bootstrap. Disponível em: <https://getbootstrap.com/docs/5.3/getting-started/introduction/>. Acesso em: 07 de mar. 2023.
+ 
+
+‌
