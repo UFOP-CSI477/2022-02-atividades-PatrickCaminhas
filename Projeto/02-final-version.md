@@ -47,12 +47,17 @@ Instalação do servidor e banco de dados
 
     1.2 Guia: https://pt.wikihow.com/Instalar-o-XAMPP-para-Windows
 2. Executar o XAMPP Control Panel, ligar Apache e MySQL nos botões start.
+
 Exportação do banco de dados:
+
 1. No XAMPP Control Panel acessar o admin do MySQL.
 2. Acessar a opção Importar no canto superior da pagina, vá em ficheiro importar e no botão "Escolher arquivo" selecione o arquivo lanchonete.sql no caminho deste projeto "2022-02-atividades-PatrickCaminhas/Projeto/Codigo/sql/lanchonete.sql" e por fim vá em importar 
+
 Colocando o projeto no servidor:
+
 1. Recorte ou mova a pasta "Codigo" deste projeto (2022-02-atividades-PatrickCaminhas/Projeto/Codigo/) para a pasta htdocs do XAMPP "C:\xampp\htdocs"
-Executando:
+
+Executando o projeto:
 1. Acesse no navegador localhost/codigo
 
 ### 6. Referências
