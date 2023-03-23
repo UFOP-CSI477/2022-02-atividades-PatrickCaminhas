@@ -14,6 +14,6 @@ A proposta para este trabalho é uma plataforma web para gerenciamento de pedido
 
 O cliente que necessita do produto pode realizar seu cadastro, fazer o login na plataforma, fazer seus pedidos e por fim solicitar cancelamento do pedido. 
 
-Já para o lado do funcionario a plataforma permite a atualização dos status dos pedidos e status do funcionamento da lanchonete. O funcionario também pode fazer pesquisas sobre clientes e realizar leitura de alguns de seus dados alem de ver dados e estatisticas sobre pedidos realizados. 
+Já para o lado do funcionario a plataforma permite a atualização dos status dos pedidos. O funcionario também pode fazer pesquisas sobre pedidos já finalizados. 
 
 Link do protótipo: https://www.figma.com/proto/buCXSYgDjMvyZYUeU0irju/iLanches?node-id=0%3A1&scaling=contain&page-id=0%3A1
