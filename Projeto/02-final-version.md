@@ -42,7 +42,9 @@ Posteriormente houve uma dificuldade na construção do front-end com CSS e deci
 ### 5. Instruções para instalação e execução
 Instalação do servidor e banco de dados
 1. Instalar o ambiente de desenvolvimento XAMPP com os recursos: servidor Apache e phpMyAdmin:
+
 1.1 Download: https://www.apachefriends.org/pt_br/index.html
+
 1.2 Guia: https://pt.wikihow.com/Instalar-o-XAMPP-para-Windows
 2. Executar o XAMPP Control Panel, ligar Apache e MySQL nos botões start.
 Exportação do banco de dados:
