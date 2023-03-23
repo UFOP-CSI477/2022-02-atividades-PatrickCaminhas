@@ -32,8 +32,11 @@
 ### 5. Referências
 
 THE PHP GROUP. PHP: Hypertext Preprocessor. Disponível em: <https://www.php.net/>. Acesso em: 19 de fev. 2023.
+
 PHP Session: criando sessões para login em PHP. Disponível em: <https://www.devmedia.com.br/criando-sessao-para-login-no-php/27347>. Acesso em: 25 de fev. 2023.
+
 CELKE. Celke - Blog. Disponível em: <https://celke.com.br/blog>. Acesso em: 25 de fev. 2023.
+
 CONTRIBUTORS, M. O., Jacob Thornton, and Bootstrap. Get started with Bootstrap. Disponível em: <https://getbootstrap.com/docs/5.3/getting-started/introduction/>. Acesso em: 07 de mar. 2023.
  
 
