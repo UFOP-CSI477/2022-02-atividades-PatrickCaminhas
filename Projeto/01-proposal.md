@@ -27,7 +27,7 @@
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos para as páginas (descrever quais páginas) foram elaborados, e podem ser encontrados em...
+  Protótipos para as páginas Index usuario, Login do usuario, Cadastro de usuario, plataforma, consulta de pedidos, realização de pedidos, login de funcionario, alteração de pedidos, consulta de pedidos foram elaborados, e podem ser encontrados em https://www.figma.com/proto/buCXSYgDjMvyZYUeU0irju/iLanches?node-id=1-657&scaling=contain&page-id=0%3A1
 
 ### 5. Referências
 
