@@ -27,7 +27,6 @@ Para o usuario funcionário:
 - Alteração do estado de abertura da lanchonete para possibilitar ou impossibilitar novos pedidos.
 - Verificação de dados estatisticos sobre pedidos e lanches.
 - Alteração, exclusão e inserção do cardapio. 
-- Pagina de confirmação do pedido.
 
 ### 3. Outras funcionalidades implementadas
 - Alteração de nome, e-mail e senha do cliente pelo próprio cliente.
