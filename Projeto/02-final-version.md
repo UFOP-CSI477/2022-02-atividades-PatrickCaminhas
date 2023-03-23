@@ -8,7 +8,7 @@
 
 ### Resumo
 
-O projeto é uma plataforma web de pedidos de lanches. O projeto foi desenvolvido com PHP e Bootstrap. A plataforma fornece ao usuario a capacidade de realização de pedidos de lanches com praticidade.
+O projeto é uma plataforma web de pedidos de lanches. O back-end foi desenvolvido em PHP enquanto o front-end com Bootstrap. A plataforma fornece ao usuario a capacidade de realização de pedidos de lanches com praticidade.
 
 ### 1. Funcionalidades implementadas
 Para o usuario cliente:
