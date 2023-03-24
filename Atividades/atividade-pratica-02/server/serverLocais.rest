@@ -1,0 +1,39 @@
+GET http://localhost:3333/locais
+
+###
+
+POST http://localhost:3333/locais
+Content-Type: application/json
+
+{
+    "nome": "Local 1",
+    "rua": "Rua 1",
+    "numero": "1",
+    "complemento": "Complemento 1",
+    "cidade_id": 1
+
+}
+
+###
+
+PUT http://localhost:3333/locais
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "Local 156",
+    "rua": "Rua 65",
+    "numero": "345",
+    "complemento": "Complemento 4545",
+    "cidade_id": 3
+
+}
+###
+
+
+DELETE http://localhost:3333/locais
+Content-Type: application/json
+
+{
+    "id": 3
+}

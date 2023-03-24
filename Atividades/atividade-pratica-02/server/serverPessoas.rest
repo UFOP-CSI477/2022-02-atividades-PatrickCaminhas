@@ -1,0 +1,43 @@
+GET http://localhost:3333/pessoas
+
+###
+
+POST http://localhost:3333/pessoas
+Content-Type: application/json
+
+{
+    "nome": "Joao",
+    "rua": "Rua 65",
+    "numero": "345",
+    "complemento": "Complemento 4545",
+    "documento": "123456789",
+    "cidade_id": 3,
+    "tipo_id": 2
+
+}
+
+###
+
+PUT http://localhost:3333/pessoas
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "Pedro",
+    "rua": "Rua 09824",
+    "numero": "345",
+    "complemento": "Complemento 4545",
+    "documento": "123456789",
+    "cidade_id": 3,
+    "tipo_id": 2
+
+}
+###
+
+
+DELETE http://localhost:3333/pessoas
+Content-Type: application/json
+
+{
+    "id": 3
+}

@@ -1,0 +1,32 @@
+GET http://localhost:3333/tipos
+
+###
+
+POST http://localhost:3333/tipos
+Content-Type: application/json
+
+{
+    "tipo":"A",
+    "Fator": "Negativo"
+
+}
+
+###
+
+PUT http://localhost:3333/tipos
+Content-Type: application/json
+
+{
+    "id": 2,
+    "tipo": "O",
+    "Fator": "NEGATIVO"
+}
+###
+
+
+DELETE http://localhost:3333/tipos
+Content-Type: application/json
+
+{
+    "id": 1
+}

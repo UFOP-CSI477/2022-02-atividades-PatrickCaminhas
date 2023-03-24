@@ -1,0 +1,47 @@
+-- CreateTable
+CREATE TABLE "tipo" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "tipo" TEXT NOT NULL,
+    "Fator" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- CreateTable
+CREATE TABLE "pessoas" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "nome" TEXT NOT NULL,
+    "rua" TEXT NOT NULL,
+    "numero" TEXT NOT NULL,
+    "complemento" TEXT NOT NULL,
+    "documento" TEXT NOT NULL,
+    "cidade_id" INTEGER NOT NULL,
+    "tipo_id" INTEGER NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "pessoas_tipo_id_fkey" FOREIGN KEY ("tipo_id") REFERENCES "tipo" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "locais" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "nome" TEXT NOT NULL,
+    "rua" TEXT NOT NULL,
+    "numero" TEXT NOT NULL,
+    "complemento" TEXT NOT NULL,
+    "cidade_id" INTEGER NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- CreateTable
+CREATE TABLE "doacoes" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "pessoa_id" INTEGER NOT NULL,
+    "local_id" INTEGER NOT NULL,
+    "data" DATETIME NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "doacoes_pessoa_id_fkey" FOREIGN KEY ("pessoa_id") REFERENCES "pessoas" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "doacoes_local_id_fkey" FOREIGN KEY ("local_id") REFERENCES "locais" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
